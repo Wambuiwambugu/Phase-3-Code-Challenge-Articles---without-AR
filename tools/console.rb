@@ -49,51 +49,51 @@ end
 
 # Testing the methods
 
-# Test Author#name
+# Author#name
 puts "Author's name: #{authors[0].name}"
 
-# Test Magazine#name
+# Magazine#name
 puts "Magazine's name: #{magazines[0].name}"
 
-# Test Magazine#category
+# Magazine#category
 puts "Magazine's category: #{magazines[0].category}"
 
-# Test Magazine.all
+# Magazine.all
 puts "All magazines: #{Magazine.all.inspect}"
 
-# Test Article#title
+# Article#title
 puts "Article title: #{Article.all[0].title}"
 
-# Test Article#author
+# Article#author
 puts "Author of the article: #{Article.all[0].author.name}"
 
-# Test Article#magazine
+# Article#magazine
 puts "Magazine of the article: #{Article.all[0].magazine.name}"
 
-# Test Author#articles
+# Author#articles
 puts "Articles written by author1: #{authors[0].articles.inspect}"
 
-# Test Author#magazines
+# Author#magazines
 puts "Magazines contributed by author1: #{authors[0].magazines.inspect}"
 
-# Test Author#add_article
-authors[0].add_article(magazines[1], 'Article 6')
+# Author#add_article
+authors[2].add_article(magazines[1], 'Article 9')
 puts "New article added by author1"
 
-# Test Author#topic_areas
+# Author#topic_areas
 puts "Topic areas for author1: #{authors[0].topic_areas.inspect}"
 
-# Test Magazine#contributors
+# Magazine#contributors
 puts "Contributors for magazine1: #{magazines[0].contributors.inspect}"
 
-# Test Magazine.find_by_name
+# Magazine.find_by_name
 found_magazine = Magazine.find_by_name('Magazine B')
 puts "Magazine found by name: #{found_magazine.inspect}"
 
-# Test Magazine#article_titles
+# Magazine#article_titles
 puts "Article titles for magazine1: #{magazines[0].article_titles.inspect}"
 
-# Test Magazine#contributing_authors
+# Magazine#contributing_authors
 puts "Contributing authors for magazine1: #{magazines[0].contributing_authors.inspect}"
 
 
