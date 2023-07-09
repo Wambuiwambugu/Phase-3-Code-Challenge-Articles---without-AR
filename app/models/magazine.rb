@@ -29,7 +29,15 @@ class Magazine
   end
 
   def contributing_authors
-    contributors.group_by(&:itself).select { |_, authors| authors.size > 2 }.keys
+    authors = contributors.uniq
+    contributing_authors = []
+  
+    authors.each do |author|
+      articles_count = contributors.count(author)
+      contributing_authors << author if articles_count > 2
+    end
+  
+    contributing_authors
   end
 
 
